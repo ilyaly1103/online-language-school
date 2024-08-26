@@ -1,8 +1,8 @@
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(114,112,112, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 .custom-toggler.navbar-toggler {
-    border-color: rgb(114, 112, 112) !important;
+    border-color: rgb(0, 0, 0) !important;
 }
 li>a{
     position: relative;
@@ -102,7 +102,7 @@ div.card{
     transform:rotate(2deg);
     z-index: 10;
 }
-span{
+li>span{
     font-size: 1.1em;
 }
 

@@ -27,7 +27,7 @@ li>a:hover::after{
 div>button.termin{
     font-family: "Gilroy", sans-serif;
     font-weight: 400 !important;
-    width: 318.8px;
+    padding-left: 22px;
     height: 60px;
 }
 h5{
@@ -65,4 +65,7 @@ div>div>p{
 }
 div>div>p:last-of-type{
     font-size: 14px;
+}
+button>img{
+    padding-bottom: 3px;
 }

@@ -110,20 +110,20 @@ div.card{
 }
 .bottom_list>li{
     list-style: none;
+    font-weight: 400 !important;
 }
 .bottom_list>li:nth-of-type(1):hover{
     transition: transform ease-in-out 0.3s;
     transform: scale(1.5);
     transform:rotate(2deg);
-    z-index: 10;
 }
 .bottom_list>li:nth-of-type(2):hover{
     transition: transform ease-in-out 0.3s;
     transition-duration: 0.2s;
     transform: scale(1.5);
     transform:rotate(2deg);
-    z-index: 10;
 }
-li>span{
-    font-size: 1.1em;
+.responsive{
+    width: 90%;
 }
+

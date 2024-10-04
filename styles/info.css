@@ -64,6 +64,18 @@ div>p:nth-of-type(2){
 .punkt-color{
     background-color: #212529 !important;
 }
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.left{
+    left: 1%;
+}
+.right{
+    right: 1%;
+}
 .toggle-button {
     cursor: pointer;
     display: flex;

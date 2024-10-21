@@ -119,18 +119,15 @@ div.card{
     font-size: 1.2em;
     list-style: none;
     font-weight: 400 !important;
-    transition: 0.3s ease-in-out;
-    transition-duration: 0.2s;
+/*     transition: 0.3s ease-in-out;
+    transition-duration: 0.2s; */
 }
-.bottom_list>li:nth-of-type(1):hover{
-    transform: rotate(1.5deg);
+/* .bottom_list>li:nth-of-type(1):hover{
+    
 }
 .bottom_list>li:nth-of-type(2):hover{
-    transform: rotate(1.5deg);
-}
-.bottom_list>li:nth-of-type(3):hover{
-    transform: rotate(1.5deg);
-}
+    
+} */
 .responsive{
     width: 100%;
 }

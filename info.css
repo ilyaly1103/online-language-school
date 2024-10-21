@@ -1,0 +1,137 @@
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+.custom-toggler.navbar-toggler {
+    border-color: rgb(0, 0, 0) !important;
+}
+li>a{
+    position: relative;
+    width: fit-content;
+} 
+li>a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 30px;
+    right: 0;
+    background-color: rgb(114, 112, 112);
+    transform: scaleX(0);
+    transition: transform ease-in-out 0.3s;
+    transform-origin: bottom right;
+}
+li>a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+div>h1{
+    font-family: "Gilroy", sans-serif;
+    font-weight: 500 !important;
+}
+div>p{
+    font-family: "Gilroy", sans-serif;
+    font-weight: 500 !important;
+}
+div>p:nth-of-type(2){
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400 !important;
+    font-size: 15px;
+}
+.center_list, .bottom_list{
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400 !important;
+    padding-inline-start: 0;
+}
+.car-list{
+    margin: 0;
+}
+.car-list>li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main .car{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+.card-active{
+    display: block !important;
+}
+.punkt-color{
+    background-color: #212529 !important;
+}
+.arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.left{
+    left: 1м;
+}
+.right{
+    right: 1%;
+}
+.toggle-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400 !important;
+}
+.toggle-button .arrow-down {
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+.toggle-button.collapsed .arrow-down {
+    transform: rotate(0deg);
+}
+.toggle-button:not(.collapsed) .arrow-down {
+    transform: rotate(180deg);
+}
+.collapse {
+    display: none;
+    transition: height 0.3s ease;
+}
+.collapse.show {
+    display: block;
+}
+.arrow-down {
+    margin-left: 5px;
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+div.card{
+    border:none;
+    font-family: "Gilroy",sans-serif;
+    font-weight: 400 !important;
+}
+.bottom_list>li{
+    font-size: 1.2em;
+    list-style: none;
+    font-weight: 400 !important;
+    transition: 0.3s ease-in-out;
+    transition-duration: 0.2s;
+}
+.bottom_list>li:nth-of-type(1):hover{
+    transform: rotate(1.5deg);
+}
+.bottom_list>li:nth-of-type(2):hover{
+    transform: rotate(1.5deg);
+}
+.bottom_list>li:nth-of-type(3):hover{
+    transform: rotate(1.5deg);
+}
+.responsive{
+    width: 100%;
+}
+

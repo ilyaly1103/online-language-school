@@ -71,7 +71,7 @@ div>p:nth-of-type(2){
     cursor: pointer;
 }
 .left{
-    left: 1%;
+    left: 1м;
 }
 .right{
     right: 1%;
@@ -115,26 +115,19 @@ div.card{
     font-family: "Gilroy",sans-serif;
     font-weight: 400 !important;
 }
-.bottom_list{
-    font-size: 1.2em;
-    transform: scale(1);
-    transform:rotate(0);
-}
 .bottom_list>li{
+    font-size: 1.2em;
     list-style: none;
     font-weight: 400 !important;
+/*     transition: 0.3s ease-in-out;
+    transition-duration: 0.2s; */
 }
-.bottom_list>li:nth-of-type(1):hover{
-    transition: transform ease-in-out 0.3s;
-    transform: scale(1.5);
-    transform:rotate(2deg);
+/* .bottom_list>li:nth-of-type(1):hover{
+    
 }
 .bottom_list>li:nth-of-type(2):hover{
-    transition: transform ease-in-out 0.3s;
-    transition-duration: 0.2s;
-    transform: scale(1.5);
-    transform:rotate(2deg);
-}
+    
+} */
 .responsive{
     width: 100%;
 }

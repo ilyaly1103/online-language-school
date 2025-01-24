@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let toggleButtons = document.querySelectorAll(".toggle-button");
     let punkt = document.querySelectorAll("#punkt");
     const card = document.querySelectorAll("#card");
-
+    let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
+    
     toggleButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             let targetId = button.getAttribute("data-target");
@@ -32,37 +35,43 @@ document.addEventListener("DOMContentLoaded", function () {
             });
             btn.classList.add("punkt-color");
 
-            const index = this.getAttribute("data-index");
-            const cardActive = document.querySelectorAll("#card")[index];
-            const arrowActive = document.querySelectorAll("#card")[index];
-
-            $(cardActive).hide().fadeIn(600);
-            cardActive.classList.add("card-active");
-            console.log('Нажата точка с индексом:', index);
+            const index = parseInt(this.getAttribute("data-index"), 10);
+            changeActiveCard(index);
         });
     });
 
-    document.querySelector('.right').addEventListener('click', function () {
-        let activeIndex = [...card].findIndex(card => card.classList.contains('card-active'));
-        if (activeIndex < card.length - 1) {
-            $(card).hide().fadeIn(600);
-            changeActiveCard(activeIndex + 1);
-        }
-    });
-
-    document.querySelector('.left').addEventListener('click', function () {
-        let activeIndex = [...card].findIndex(card => card.classList.contains('card-active'));
-        if (activeIndex > 0) {
-            $(card).hide().fadeIn(600);
-            changeActiveCard(activeIndex - 1);
-        }
-    });
     function changeActiveCard(newIndex) {
-        card.forEach(cards => cards.classList.remove('card-active'));
-        punkt.forEach(dot => dot.classList.remove('punkt-color'));
+        card.forEach(cards => cards.classList.remove("card-active"));
+        punkt.forEach(dot => dot.classList.remove("punkt-color"));
 
-        card[newIndex].classList.add('card-active');
-        punkt[newIndex].classList.add('punkt-color');
+        card[newIndex].classList.add("card-active");
+        punkt[newIndex].classList.add("punkt-color");
     }
-});
 
+    
+    const carContainer = document.querySelector(".car");
+
+    carContainer.addEventListener("touchstart", (event) => {
+        startX = event.touches[0].clientX;
+    });
+
+    carContainer.addEventListener("touchmove", (event) => {
+        endX = event.touches[0].clientX;
+    });
+
+    carContainer.addEventListener("touchend", () => {
+        if (startX > endX + 50) {
+            
+            if (currentIndex < card.length - 1) {
+                currentIndex++;
+                changeActiveCard(currentIndex);
+            }
+        } else if (startX < endX - 50) {
+            
+            if (currentIndex > 0) {
+                currentIndex--;
+                changeActiveCard(currentIndex);
+            }
+        }
+    });
+});

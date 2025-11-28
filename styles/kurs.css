@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("../font/Gilroy-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("../font/Gilroy-Medium.ttf") format("opentype");
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(0, 0, 0) !important;
+}
+
+li>a {
+    position: relative;
+    width: fit-content;
+}
+
+.navbar{
+    background-color: #f4f4f4;
+}
+
+.nav-link {
+    font-size: 18px;
+    padding: 0 !important;
+    margin: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    margin-left: var(--bs-navbar-nav-link-padding-x);
+    margin-right: var(--bs-navbar-nav-link-padding-x);
+}
+
+.navbar-collapse{
+    justify-content: end;
+}
+
+li>a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 25px;
+    right: 0;
+    background-color: rgb(114, 112, 112);
+    transform: scaleX(0);
+    transition: transform ease-in-out 0.3s;
+    transform-origin: bottom right;
+}
+
+li>a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+}
+
+.container {
+    font-family: "Gilroy", sans-serif;
+}
+
+h1 {
+    font-family: "Gilroy-Medium", sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item>p {
+    margin-top: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 1210px) {
+    .block{
+        justify-content: center;
+        column-gap: 80px;
+        row-gap: 50px;
+    }
+}
+
+.item>img {
+    width: 150px;
+    height: 150px;
+}
+
+.form>div>input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #212121;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+.form>div>input:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 18px
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 1rem !important;
+    }
+
+    .form>div>input:focus~label,
+    .form>div>input:not(:placeholder-shown)~label {
+        font-size: 1rem !important;
+    }
+}
+
+.form>div>.label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.form>div>input:focus~label,
+.form>div>input:not(:placeholder-shown)~label {
+    font-size: 1.2rem;
+    top: -10px;
+}
+
+.form>div {
+    margin: 30px 0 30px 0;
+}
+
+.form>div>.format>div>div {
+    margin: 20px;
+}
+
+form.was-submitted input:invalid {
+    outline: 2px solid red;
+    background-color: ivory;
+}
+
+.format {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: fit-content;
+    border: none;
+    position: relative;
+}
+
+.btn {
+    width: 180px;
+    height: 40px;
+    font-size: large;
+    color: #ddd;
+    border-radius: 4px;
+    background-color: #212121;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    color: #212121;
+}
+
+.dialog {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Gilroy", sans-serif;
+    background-color: #ddd;
+    border-radius: 10px;
+    z-index: 2;
+    width: 500px;
+    height: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .dialog {
+        width: 400px;
+        height: 250px;
+    }
+
+    .dialog p {
+        font-size: 17px;
+    }
+
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow.visible {
+    display: block;
+}
+
+.shadow {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    opacity: 0.5;
+    z-index: 1;
+    top: 0;
+}
+
+.font-16 {
+    font-size: 20px !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar{
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link{
+        font-size: 18px !important;
+    }
+
+    .font-16 {
+        font-size: 18px !important;
+    }
+    
+}

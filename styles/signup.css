@@ -1,0 +1,126 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: bisque;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px rgb(52, 52, 52);
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+    color: #212121;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    font-size: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #212121;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    font-size: 0.8rem;
+    top: -10px;
+}
+
+button{
+    width: 180px;
+    height: 40px;
+    font-size: large;
+    color: #ddd;
+    border-radius: 4px;
+    background-color: #212121;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: #ddd;
+    color: #212121;
+}
+
+.links{width: fit-content;}
+
+a{
+    display: block;
+    color: #212121;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+a:hover{
+    color: #c2c2c2;
+}
+
+span{
+    display: block;
+}
+
+span::after, span::before{
+    content: "";
+    display: inline-block;
+    background-color: lightgrey;
+    width: 150px;
+    height: 1px;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+@media (max-width:768px) {
+    .container{
+        width: 300px;
+    }
+    span::after, span::before{
+        width: 100px;
+    }
+}
+@media (max-width:425px) {
+    .container{
+        width: 200px;
+    }
+    span::after, span::before{
+        width: 50px;
+    }
+}
